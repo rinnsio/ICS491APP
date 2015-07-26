@@ -8,4 +8,5 @@ public class MyApplet extends JApplet{
 		super.paint(g);
 		g.drawString("Hello World", 25, 25);
 	}
+	// Test
 }
