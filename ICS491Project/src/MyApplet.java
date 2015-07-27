@@ -1,13 +1,18 @@
 
 import java.awt.*;
 import java.net.URL;
-
+import java.sql.*;
 import javax.swing.JApplet;
 
 public class MyApplet extends JApplet {
 	
-    public String username = "";
-    public String password = "";
+    public String m_username = "";
+    public String m_password = "";
+    
+    // I made this up. Database is not created yet!
+	private static final String ADMIN_USERNAME = "root";
+	private static final String ADMIN_PASSWORD = "root";
+	private static final String CONNECT_DATABASE = "jdbc:mysql://localhost:8000/minions";
 
     public void init() {
         if (!login()) {
@@ -21,6 +26,21 @@ public class MyApplet extends JApplet {
         }
         else {
             // here the username and password are OK
+        	Connection conn = null;
+        	
+        	try{
+        		// Connect to the database
+        		conn = DriverManager.getConnection(CONNECT_DATABASE, ADMIN_USERNAME, ADMIN_PASSWORD);
+        		System.out.println("Connected Successfully.");
+        		
+        		// Retrieves data from database
+        		Statement stat = (Statement) conn.createStatement();
+        		String getinfo = "SELECT * FROM user WHERE name = " + m_username;
+        		stat.executeQuery(getinfo);
+        	}
+        	catch (SQLException e){
+        		System.err.println(e);
+        	}
         }
     }
 
@@ -29,10 +49,10 @@ public class MyApplet extends JApplet {
         MyLogin login = new MyLogin();
         requestFocus();
         if (login.id) {
-            username = login.username.getText();
-            password = login.password.getText();
-            userValid = validateUser(username, password);
-            System.out.println("The password for " + username
+        	m_username = login.username.getText();
+        	m_password = login.password.getText();
+            userValid = validateUser(m_username, m_password);
+            System.out.println("The password for " + m_username
                     + " is " + (userValid ? "valid" : "invalid"));
         }
         else {
