@@ -1,0 +1,10 @@
+*.xml
+ICS491Project/JavaProject4/dist/JavaProject4.jar
+*.mf
+*.properties
+ICS491Project/JavaProject4/dist/README.TXT
+*.netbeans_automatic_build
+ICS491Project/JavaProject4/build/classes/.netbeans_update_resources
+ICS491Project/JavaProject4/build/classes/accessdenied.html
+*.class
+ICS491Project/JavaProject4/build/classes/login.html
