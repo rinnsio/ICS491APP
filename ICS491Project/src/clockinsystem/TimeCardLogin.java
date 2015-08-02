@@ -18,6 +18,7 @@ public class TimeCardLogin {
   //Constructor which establishes connection with a database to validate credentials
   //Takes a 4 number long passcode string and checks to see if it is a valid code
   public TimeCardLogin(String passcode) {
+      //Extra security feature to prevent any errors in length of input
       if(passcode.length() == 4) {
           if(validLogin(passcode)) {
               //User exists and timecard can be accessed
