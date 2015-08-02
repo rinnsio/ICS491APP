@@ -48,7 +48,7 @@ public class TimeCardLogin {
           
           //If a user with the passcode exists return true, otherwise false
           if(results.isBeforeFirst()) {
-      results.first();
+              results.first();
               user = results.getString(1);
               return true;
           }
@@ -73,7 +73,7 @@ public class TimeCardLogin {
 
           // If a user with the userID exists set clock status, otherwise do nothing
           if (results.isBeforeFirst()) {
-      results.first();
+              results.first();
               inOrOut = results.getBoolean(1);
           }
       }
