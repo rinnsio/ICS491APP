@@ -34,7 +34,7 @@ public class TimeCardLogin {
   //Returns true if the passcode exists/is associated, false if not
   private boolean validLogin(String passcode) {
       try {
-        //Attempts to get a connection to the database
+        //Attempts to get a connection to the database.  (database location, username, password).
           connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "Appuser", "9i8u7y");
           
           //Takes a query and executes it
