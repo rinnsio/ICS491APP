@@ -33,12 +33,19 @@ public class TimeCardLogin {
   
   //Returns true if the passcode exists/is associated, false if not
   private boolean validLogin(String passcode) {
+      connection();
+      
+      String database = "jdbc:mysql://localhost:3306/minions";
+      String username = "root";
+      String password = "";
+      
       try {
         //Attempts to get a connection to the database.  (database location, username, password).
-          connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "Appuser", "9i8u7y");
+          connection = DriverManager.getConnection(database, username, password);
+          System.out.println("Connected to Database.");
           
           //Takes a query and executes it
-          final String userCredentials = "SELECT userID FROM pin_table WHERE pin = ? ";
+          final String userCredentials = "SELECT user_id FROM pin WHERE pin = ? ";
           
           //Prepares a statement using the passcode given by the user
           PreparedStatement prepStatement = connection.prepareStatement(userCredentials);
@@ -63,7 +70,7 @@ public class TimeCardLogin {
   private void setInOrOut() {
       try {
           // Takes a query and executes it
-          final String clockStatus = "SELECT clockStat FROM clock_table WHERE userID = ? ";
+          final String clockStatus = "SELECT in_out FROM clockinout WHERE user_id = ? ";
 
           // Prepares a statement using the userID of the user
           PreparedStatement prepStatement = connection.prepareStatement(clockStatus);
@@ -96,5 +103,18 @@ public class TimeCardLogin {
   //Returns whether the user is attempting to clock in or out
   public boolean getInOrOut() {
       return inOrOut;
+  }
+  
+  /** 
+   * Get the driver in order to get connection to the database.
+   */
+  public static void connection() {
+      try {
+          Class.forName("com.mysql.jdbc.Driver");
+          System.out.println("Driver worked.");
+      } catch (ClassNotFoundException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+      }
   }
 }
