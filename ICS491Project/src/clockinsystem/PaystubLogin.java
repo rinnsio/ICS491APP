@@ -1,6 +1,6 @@
 package clockinsystem;
 
-//TimeCardLogin file made for ICS491Applet for the ICS491 project
+//PaystubLogin file made for ICS491Applet for the ICS491 project
 //Author:  Kris Nakamura 
 //Created: 8/1/15
 //
@@ -13,8 +13,10 @@ public class PaystubLogin {
     private boolean validUser = false;
     private boolean privilegeLevel = false;
     private ResultSet results;
+    private ResultSet databaseInfo;
     private String user;
-    private Connection connection;
+    private Connection connection = null;
+    private PaystubRetriever RFunctions;
     
     //Constructor which establishes connection with a database to validate credentials
     //Takes a username and password string and checks to see if it is a valid login
@@ -22,6 +24,7 @@ public class PaystubLogin {
         if(validLogin(username, password)) {
             //User exists and paystub info can be accessed
             validUser = true;
+            RFunctions = new PaystubRetriever(connection, username);
         }
         else {
             //No such user or incorrect password
@@ -40,7 +43,7 @@ public class PaystubLogin {
             connection = DriverManager.getConnection(database, databaseUsername, databasePassword);
             
             //Takes a query and executes it
-            final String userCredentials = "SELECT privilege_level FROM login WHERE (user_i = ? AND password = ?) ";
+            final String userCredentials = "SELECT privilege_level FROM login WHERE (user_id = ? AND password = ?) ";
             
             //Prepares a statement using the password given by the user
             PreparedStatement prepStatement = connection.prepareStatement(userCredentials);
@@ -86,5 +89,13 @@ public class PaystubLogin {
         catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    
+    //Retrieves info from the database in the form of a ResultSet
+    //SHOULD ONLY BE CALLED IF VALID USER
+    //The retrieved results will either be empty, or contain:
+    //date, wage, time in, time out, total hours, total wage
+    public ResultSet getDatabaseInfo() {
+        return RFunctions.getData();
     }
 }
