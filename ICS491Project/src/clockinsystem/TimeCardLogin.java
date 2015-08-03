@@ -36,13 +36,12 @@ public class TimeCardLogin {
       connection();
       
       String database = "jdbc:mysql://localhost:3306/minions";
-      String username = "root";
-      String password = "";
+      String databaseUsername = "root";
+      String databasePassword = "";
       
       try {
-        //Attempts to get a connection to the database.  (database location, username, password).
-          connection = DriverManager.getConnection(database, username, password);
-          System.out.println("Connected to Database.");
+          //Attempts to get a connection to the database.  (database location, username, password).
+          connection = DriverManager.getConnection(database, databaseUsername, databasePassword);
           
           //Takes a query and executes it
           final String userCredentials = "SELECT user_id FROM pin WHERE pin = ? ";
@@ -111,7 +110,6 @@ public class TimeCardLogin {
   public static void connection() {
       try {
           Class.forName("com.mysql.jdbc.Driver");
-          System.out.println("Driver worked.");
       } catch (ClassNotFoundException e) {
           e.printStackTrace();
       }
