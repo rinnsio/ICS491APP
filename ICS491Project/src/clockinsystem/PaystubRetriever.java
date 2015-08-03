@@ -13,27 +13,27 @@ import java.sql.ResultSet;
 
 public class PaystubRetriever {
     private ResultSet results;
-    
+
     public PaystubRetriever(Connection connection, String username) {
-        //Takes a query and executes it
-        //Query retrieves all user's paystub info and stores it in a ResultSet
-        final String userCredentials =
-                "SELECT date, wage, time_in, time_out, total_hours, total_wages "
-                        + "FROM log WHERE user_id = ? ";
+        // Takes a query and executes it
+        // Query retrieves all user's paystub info and stores it in a ResultSet
+        final String userCredentials = "SELECT date, wage, time_in, time_out, total_hours, total_wages "
+                + "FROM log WHERE user_id = ? ";
 
         try {
-            //Prepares a statement using the password given by the user
-            PreparedStatement prepStatement = connection.prepareStatement(userCredentials);
+            // Prepares a statement using the password given by the user
+            PreparedStatement prepStatement = connection
+                    .prepareStatement(userCredentials);
             prepStatement.setString(1, username);
 
-            //Executes a query 
+            // Executes a query
             results = prepStatement.executeQuery();
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
+
+    //Returns the dataset belonging to the user
     public ResultSet getData() {
         return results;
     }
