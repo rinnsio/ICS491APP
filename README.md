@@ -11,7 +11,7 @@
 <h1>Version 2 submission</h1>
 <h2>Contributors:</h2> 
 <ul>
-  <li>Weng Lam Sio: Program database, vulnerabilities testing (PaystubLoginTest.java, pictures of database on git [since we're running on a local database])</li>
+  <li>Weng Lam Sio: Program database, vulnerabilities testing (PaystubLoginTest.java, pictures of database on git under the package 'clockinsystem' [since we're running on a local database])</li>
   <li>Kristopher Nakamura: Program functionalities (PaystubLogin.java, PaystubRetriever.java, TimeCardLogin.java, README)</li>
   <li>Vinson Gao: Program GUI(clockin.java, clockout.java, ColorTable.java, login.java, logs.java)</li>
 </ul>
