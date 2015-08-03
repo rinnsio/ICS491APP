@@ -96,6 +96,7 @@ public class PaystubLogin {
     //The retrieved results will either be empty, or contain:
     //date, wage, time in, time out, total hours, total wage
     public ResultSet getDatabaseInfo() {
-        return RFunctions.getData();
+        databaseInfo = RFunctions.getData();
+        return databaseInfo;
     }
 }
