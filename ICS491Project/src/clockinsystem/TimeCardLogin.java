@@ -113,7 +113,6 @@ public class TimeCardLogin {
           Class.forName("com.mysql.jdbc.Driver");
           System.out.println("Driver worked.");
       } catch (ClassNotFoundException e) {
-          // TODO Auto-generated catch block
           e.printStackTrace();
       }
   }
