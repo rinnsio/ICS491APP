@@ -9,8 +9,8 @@ Vinson Gao: Program GUI(clockin.java, clockout.java, ColorTable.java, login.java
 
 Current Progress
 
-We had to pretty much redo our whole program due to issues with misunderstandings across all three members. 
-To solve the problem, we drafted out a rough flow chart of the functionalities as well as drew out how the GUI should look. 
+We had to pretty much redo our whole program due to issues with misunderstandings across all three members. To solve the 
+problem, we drafted out a rough flow chart of the functionalities as well as drew out how the GUI should look. 
 Now, everything is pretty much ready to go but in fragments, the program simply needs the GUI combined together with the 
 functionality. We're planning on trying to create a remote database to access for our next iteration as well as having a 
 fully running program.
