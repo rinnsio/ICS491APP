@@ -39,7 +39,7 @@ public class PaystubLogin {
         String databasePassword = "";
         
         try {
-          //Attempts to get a connection to the database.  (database location, username, password).
+            //Attempts to get a connection to the database.  (database location, username, password).
             connection = DriverManager.getConnection(database, databaseUsername, databasePassword);
             
             //Takes a query and executes it
@@ -82,6 +82,10 @@ public class PaystubLogin {
         return privilegeLevel;
     }
     
+    
+    /** 
+     * Get the driver in order to get connection to the database.
+     */
     public static void connection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
