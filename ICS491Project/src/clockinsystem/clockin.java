@@ -14,8 +14,10 @@ public class clockin extends javax.swing.JDialog {
     /**
      * Creates new form clockin
      */
-    public clockin(java.awt.Frame parent, boolean modal) {
+    TimeCardLogin timeInOut;
+    public clockin(java.awt.Frame parent, boolean modal, TimeCardLogin timeInOut_) {
         super(parent, modal);
+        timeInOut = timeInOut_;
         initComponents();
     }
 
@@ -42,9 +44,19 @@ public class clockin extends javax.swing.JDialog {
         jLabel1.setText("Do you want to clock in?");
 
         jButton1.setText("OK");
-
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // call the clock in function 
+                timeInOut.clockin();
+                setVisible(false);
+            }
+        });
         jButton2.setText("CANCLE");
-
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                setVisible(false);
+            }
+        });
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(

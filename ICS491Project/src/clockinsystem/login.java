@@ -5,6 +5,7 @@
  */
 package clockinsystem;
 
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 /**
@@ -140,8 +141,11 @@ public class login extends javax.swing.JFrame {
                 PaystubLogin login = new PaystubLogin(usernameInput, passwordInput);
                 // if user is exist
                 if(login.getValidUser() == true){
+                    // retrive the minions record logs from database
+                    ResultSet logs = login.getDatabaseInfo();
                     // create an instance of logs
-                    logs dialog = new logs(new javax.swing.JFrame(), true);
+                    logs dialog = new logs(new javax.swing.JFrame(), true, logs);
+                    //send the data to the logs dialog before it pops up. 
                     dialog.setVisible(true);
                 }
                 else{
@@ -197,7 +201,14 @@ public class login extends javax.swing.JFrame {
         jButton2.setText("7");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("7");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"7");
+                }
+                
             }
         });
 
@@ -205,61 +216,166 @@ public class login extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(102, 204, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton3.setText("8");
-        // NEED TO ADD addActionListener
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("8");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"8");
+                }
+                
+            }
+        });
 
         // settings for button '9'
         jButton4.setBackground(new java.awt.Color(102, 204, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton4.setText("9");
-        // NEED TO ADD addActionListener
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("9");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"9");
+                }
+                
+            }
+        });
 
         // settings for button '4'
         jButton5.setBackground(new java.awt.Color(102, 204, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton5.setText("4");
-        // NEED TO ADD addActionListener
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("4");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"4");
+                }
+                
+            }
+        });
 
         // settings for button '5'
         jButton9.setBackground(new java.awt.Color(102, 204, 255));
         jButton9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton9.setText("5");
-        // NEED TO ADD addActionListener
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("5");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"5");
+                }
+                
+            }
+        });
 
         // settings for button '6'
         jButton6.setBackground(new java.awt.Color(102, 204, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton6.setText("6");
-        // NEED TO ADD addActionListener
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("4");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"4");
+                }
+                
+            }
+        });
 
         // settings for button '1'
         jButton8.setBackground(new java.awt.Color(102, 204, 255));
         jButton8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton8.setText("1");
-        // NEED TO ADD addActionListener
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("1");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"1");
+                }
+                
+            }
+        });
 
         // settings for button '2'
         jButton7.setBackground(new java.awt.Color(102, 204, 255));
         jButton7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton7.setText("2");
-        // NEED TO ADD addActionListener
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("2");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"2");
+                }
+                
+            }
+        });
 
         // settings for button '3'
         jButton12.setBackground(new java.awt.Color(102, 204, 255));
         jButton12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton12.setText("3");
-        // NEED TO ADD addActionListener
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("3");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"3");
+                }
+                
+            }
+        });
 
         // settings for button 'C'
         jButton10.setBackground(new java.awt.Color(255, 153, 153));
         jButton10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton10.setText("C");
-        // NEED TO ADD addActionListener
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                    jPasswordField2.setText("");
+                
+            }
+        });
 
         // settings for button '0'
         jButton13.setBackground(new java.awt.Color(102, 204, 255));
         jButton13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton13.setText("0");
-        // NEED TO ADD addActionListener
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                char[] array = jPasswordField2.getPassword();
+                if(array.length>3){
+                    jPasswordField2.setText("0");
+                }else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"0");
+                }
+
+            }
+        });
 
         // settings for button 'G'
         jButton11.setBackground(new java.awt.Color(51, 255, 51));
@@ -270,7 +386,19 @@ public class login extends javax.swing.JFrame {
                 passcodeInput = String.valueOf(jPasswordField2.getPassword());
                 // create an instance of TimeCardLogin and pass the inputs as parameter
                 TimeCardLogin timeInOut = new TimeCardLogin(passcodeInput);
-                //jButton11ActionPerformed(evt);
+                if(timeInOut.getValidUser()){
+                    
+                    if(timeInOut.getInOrOut()){
+                        clockout dialog = new clockout(new javax.swing.JFrame(), true, timeInOut);
+                        dialog.setVisible(true);
+                    }else{
+                        clockin dialog1 = new clockin(new javax.swing.JFrame(), true, timeInOut);
+                        dialog1.setVisible(true);
+                    }
+                    
+
+                    
+                }
             }
         });
 /*
@@ -383,18 +511,7 @@ public class login extends javax.swing.JFrame {
 
     // NEED TO CREATE ActionPerformed METHOD FOR ALL BUTTONS
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-         clockin dialog = new clockin(new javax.swing.JFrame(), true);
-         dialog.setVisible(true);
-         
-         clockout dialog1 = new clockout(new javax.swing.JFrame(), true);
-         dialog1.setVisible(true);
-    }//GEN-LAST:event_jButton11ActionPerformed
-
+   
     /**
      * @param args the command line arguments
      */

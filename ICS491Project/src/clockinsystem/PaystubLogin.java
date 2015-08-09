@@ -39,6 +39,7 @@ public class PaystubLogin {
         String databasePassword = "";
         
         try {
+            
             //Attempts to get a connection to the database.  (database location, username, password).
             connection = DriverManager.getConnection(database, databaseUsername, databasePassword);
             
@@ -60,6 +61,7 @@ public class PaystubLogin {
                 privilegeLevel = results.getBoolean(1);
                 return true;
             }
+            
         }
         catch(Exception e) {
             e.printStackTrace();
