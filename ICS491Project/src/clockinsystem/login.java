@@ -11,6 +11,32 @@ package clockinsystem;
  */
 public class login extends javax.swing.JFrame {
 
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    //private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
+    // End of variables declaration//GEN-END:variables
+    
     /**
      * Creates new form MainMenu
      */
@@ -27,37 +53,64 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        // header
         jPanel1 = new javax.swing.JPanel();
+        // the tabs on the header
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        // login panel
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        // the label on the left side of the input box for user name
         jLabel2 = new javax.swing.JLabel();
+        // the input box for username
+        jTextField1 = new javax.swing.JTextField();
+        // the label on the left side of the input box for password
         jLabel3 = new javax.swing.JLabel();
+        // the input box for password
+        jPasswordField1 = new javax.swing.JPasswordField();
+        // the login button on the login panel
+        jButton1 = new javax.swing.JButton();
+        
+        // time in/out panel
         jPanel3 = new javax.swing.JPanel();
+        // button '7'
         jButton2 = new javax.swing.JButton();
+        // button '8'
         jButton3 = new javax.swing.JButton();
+        // button '9'
         jButton4 = new javax.swing.JButton();
+        // button '4'
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        // button '5'
         jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        // button '6'
+        jButton6 = new javax.swing.JButton();
+        // button '1'
+        jButton8 = new javax.swing.JButton();
+        // button '2'
+        jButton7 = new javax.swing.JButton();
+        // button '3'
         jButton12 = new javax.swing.JButton();
+        // button 'C'
+        jButton10 = new javax.swing.JButton();
+        // button '0'
         jButton13 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        // button 'G'
+        jButton11 = new javax.swing.JButton();      
+        //jLabel1 = new javax.swing.JLabel();
+        // the input box for passcode
+        jPasswordField2 = new javax.swing.JPasswordField();  
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        // set header background color to yellow
         jPanel1.setBackground(new java.awt.Color(255, 255, 51));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 204, 51));
-
+        // add a login tab that displays the login panel
+        jTabbedPane1.addTab("LOGIN", jPanel2);
+        // set login panel background color to yellow
         jPanel2.setBackground(new java.awt.Color(255, 255, 0));
-
+        // set login button on the login panel to blue
         jButton1.setBackground(new java.awt.Color(0, 204, 255));
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,14 +119,19 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        // set default message in the input box for user name
+        jTextField1.setText("username");
+        
+        // set default message in the input box for password
         jPasswordField1.setText("password");
 
-        jTextField1.setText("username");
-
+        // set the label on the left side of the input box for user name
         jLabel2.setText("username");
 
+        // set the label on the left side of the input box for password
         jLabel3.setText("password");
 
+        // set how all the labels, fields and button displays
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -106,10 +164,15 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(196, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("LOGIN", jPanel2);
-
+        // add a time in/out tab that displays the time in/out panel
+        jTabbedPane1.addTab("QUICK TIME IN/OUT", jPanel3);
+        // set time in/out panel background color to yellow
         jPanel3.setBackground(new java.awt.Color(255, 255, 0));
-
+        
+        // set default message in the input box for passcode
+        jPasswordField2.setText("0000");
+        
+        // settings for button '7'
         jButton2.setBackground(new java.awt.Color(102, 204, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("7");
@@ -119,38 +182,67 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        // settings for button '8'
         jButton3.setBackground(new java.awt.Color(102, 204, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton3.setText("8");
+        // NEED TO ADD addActionListener
 
+        // settings for button '9'
         jButton4.setBackground(new java.awt.Color(102, 204, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton4.setText("9");
+        // NEED TO ADD addActionListener
 
+        // settings for button '4'
         jButton5.setBackground(new java.awt.Color(102, 204, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton5.setText("4");
+        // NEED TO ADD addActionListener
 
-        jButton6.setBackground(new java.awt.Color(102, 204, 255));
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton6.setText("6");
-
-        jButton7.setBackground(new java.awt.Color(102, 204, 255));
-        jButton7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton7.setText("2");
-
-        jButton8.setBackground(new java.awt.Color(102, 204, 255));
-        jButton8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton8.setText("1");
-
+        // settings for button '5'
         jButton9.setBackground(new java.awt.Color(102, 204, 255));
         jButton9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton9.setText("5");
+        // NEED TO ADD addActionListener
 
+        // settings for button '6'
+        jButton6.setBackground(new java.awt.Color(102, 204, 255));
+        jButton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton6.setText("6");
+        // NEED TO ADD addActionListener
+
+        // settings for button '1'
+        jButton8.setBackground(new java.awt.Color(102, 204, 255));
+        jButton8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton8.setText("1");
+        // NEED TO ADD addActionListener
+
+        // settings for button '2'
+        jButton7.setBackground(new java.awt.Color(102, 204, 255));
+        jButton7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton7.setText("2");
+        // NEED TO ADD addActionListener
+
+        // settings for button '3'
+        jButton12.setBackground(new java.awt.Color(102, 204, 255));
+        jButton12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton12.setText("3");
+        // NEED TO ADD addActionListener
+
+        // settings for button 'C'
         jButton10.setBackground(new java.awt.Color(255, 153, 153));
         jButton10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton10.setText("C");
+        // NEED TO ADD addActionListener
 
+        // settings for button '0'
+        jButton13.setBackground(new java.awt.Color(102, 204, 255));
+        jButton13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton13.setText("0");
+        // NEED TO ADD addActionListener
+
+        // settings for button 'G'
         jButton11.setBackground(new java.awt.Color(51, 255, 51));
         jButton11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton11.setText("G");
@@ -159,19 +251,13 @@ public class login extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-
-        jButton12.setBackground(new java.awt.Color(102, 204, 255));
-        jButton12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton12.setText("3");
-
-        jButton13.setBackground(new java.awt.Color(102, 204, 255));
-        jButton13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton13.setText("0");
-
+/*
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("*****");
-
+*/
+        
+        // set how all the labels, fields and button displays
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -208,15 +294,23 @@ public class login extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(81, 81, 81))
+/*            
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+*/    
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addContainerGap(81, Short.MAX_VALUE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(181, 181, 181))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
+                .addGap(25, 25, 25)
+                //.addComponent(jLabel1)
+                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -224,23 +318,21 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(8, 8, 8)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(8, 8, 8)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 55, Short.MAX_VALUE))
         );
-
-        jTabbedPane1.addTab("QUICK TIME IN/OUT", jPanel3);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -319,29 +411,4 @@ public class login extends javax.swing.JFrame {
             }
         });
     }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    // End of variables declaration//GEN-END:variables
 }
