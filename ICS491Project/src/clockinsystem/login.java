@@ -5,6 +5,8 @@
  */
 package clockinsystem;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vinson
@@ -35,6 +37,9 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    String usernameInput = "";
+    String passwordInput = "";
+    String passcodeInput = "";
     // End of variables declaration//GEN-END:variables
     
     /**
@@ -110,14 +115,6 @@ public class login extends javax.swing.JFrame {
         jTabbedPane1.addTab("LOGIN", jPanel2);
         // set login panel background color to yellow
         jPanel2.setBackground(new java.awt.Color(255, 255, 0));
-        // set login button on the login panel to blue
-        jButton1.setBackground(new java.awt.Color(0, 204, 255));
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         // set default message in the input box for user name
         jTextField1.setText("username");
@@ -130,6 +127,28 @@ public class login extends javax.swing.JFrame {
 
         // set the label on the left side of the input box for password
         jLabel3.setText("password");
+        // set login button on the login panel to blue
+        jButton1.setBackground(new java.awt.Color(0, 204, 255));
+        jButton1.setText("Login");
+        // when login button is pressed
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // get inputs from user
+                usernameInput = jTextField1.getText();
+                passwordInput = String.valueOf(jPasswordField1.getPassword());
+                // create an instance of PaystubLogin and pass the inputs as parameter
+                PaystubLogin login = new PaystubLogin(usernameInput, passwordInput);
+                // if user is exist
+                if(login.getValidUser() == true){
+                    // create an instance of logs
+                    logs dialog = new logs(new javax.swing.JFrame(), true);
+                    dialog.setVisible(true);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Incorrect username or password.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
 
         // set how all the labels, fields and button displays
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -248,7 +267,10 @@ public class login extends javax.swing.JFrame {
         jButton11.setText("G");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                passcodeInput = String.valueOf(jPasswordField2.getPassword());
+                // create an instance of TimeCardLogin and pass the inputs as parameter
+                TimeCardLogin timeInOut = new TimeCardLogin(passcodeInput);
+                //jButton11ActionPerformed(evt);
             }
         });
 /*
@@ -359,14 +381,11 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // NEED TO CREATE ActionPerformed METHOD FOR ALL BUTTONS
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        logs dialog = new logs(new javax.swing.JFrame(), true);
-        dialog.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
          clockin dialog = new clockin(new javax.swing.JFrame(), true);
