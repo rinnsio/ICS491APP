@@ -8,6 +8,20 @@
 
 
 <body>
+<h1>Version 3 submission</h1>
+<h2>Contributors:</h2> 
+<ul>
+  <li>Weng Lam Sio: </li>
+  <li>Kristopher Nakamura: </li>
+  <li>Vinson Gao: </li>
+</ul>
+
+<h3>Current Progress</h3>
+  <p>
+    
+  </p>
+  
+  
 <h1>Version 2 submission</h1>
 <h2>Contributors:</h2> 
 <ul>
