@@ -200,15 +200,17 @@ public class login extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("7");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+            public void actionPerformed(java.awt.event.ActionEvent evt) {                
+                //char[] array = jPasswordField2.getPassword();
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("7");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"7");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "7");
+                }                
             }
         });
 
@@ -218,14 +220,15 @@ public class login extends javax.swing.JFrame {
         jButton3.setText("8");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("8");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"8");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "8");
+                }   
             }
         });
 
@@ -235,14 +238,15 @@ public class login extends javax.swing.JFrame {
         jButton4.setText("9");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("9");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"9");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "9");
+                }   
             }
         });
 
@@ -252,14 +256,15 @@ public class login extends javax.swing.JFrame {
         jButton5.setText("4");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("4");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"4");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "4");
+                }                   
             }
         });
 
@@ -269,14 +274,15 @@ public class login extends javax.swing.JFrame {
         jButton9.setText("5");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("5");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"5");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "5");
+                }   
             }
         });
 
@@ -286,14 +292,15 @@ public class login extends javax.swing.JFrame {
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
-                    jPasswordField2.setText("4");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"4");
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
+                    jPasswordField2.setText("6");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "6");
+                }   
             }
         });
 
@@ -303,14 +310,15 @@ public class login extends javax.swing.JFrame {
         jButton8.setText("1");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("1");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"1");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "1");
+                }   
             }
         });
 
@@ -320,14 +328,15 @@ public class login extends javax.swing.JFrame {
         jButton7.setText("2");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("2");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"2");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "2");
+                }   
             }
         });
 
@@ -337,14 +346,15 @@ public class login extends javax.swing.JFrame {
         jButton12.setText("3");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("3");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"3");
                 }
-                
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "3");
+                }   
             }
         });
 
@@ -353,10 +363,8 @@ public class login extends javax.swing.JFrame {
         jButton10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton10.setText("C");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                    jPasswordField2.setText("");
-                
+            public void actionPerformed(java.awt.event.ActionEvent evt) {                
+                    jPasswordField2.setText("");                
             }
         });
 
@@ -366,14 +374,15 @@ public class login extends javax.swing.JFrame {
         jButton13.setText("0");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                char[] array = jPasswordField2.getPassword();
-                if(array.length>3){
+                if(String.valueOf(jPasswordField2.getPassword()).equals("0000")){
                     jPasswordField2.setText("0");
-                }else{
-                    jPasswordField2.setText((new String(jPasswordField2.getPassword()))+"0");
                 }
-
+                else if(String.valueOf(jPasswordField2.getPassword()).length() > 3){
+                    // do nothing
+                }
+                else{
+                    jPasswordField2.setText((new String(jPasswordField2.getPassword())) + "0");
+                }   
             }
         });
 
@@ -386,18 +395,14 @@ public class login extends javax.swing.JFrame {
                 passcodeInput = String.valueOf(jPasswordField2.getPassword());
                 // create an instance of TimeCardLogin and pass the inputs as parameter
                 TimeCardLogin timeInOut = new TimeCardLogin(passcodeInput);
-                if(timeInOut.getValidUser()){
-                    
+                if(timeInOut.getValidUser()){                    
                     if(timeInOut.getInOrOut()){
                         clockout dialog = new clockout(new javax.swing.JFrame(), true, timeInOut);
                         dialog.setVisible(true);
                     }else{
                         clockin dialog1 = new clockin(new javax.swing.JFrame(), true, timeInOut);
                         dialog1.setVisible(true);
-                    }
-                    
-
-                    
+                    }         
                 }
             }
         });
@@ -450,9 +455,9 @@ public class login extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 */    
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(81, Short.MAX_VALUE)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(181, 181, 181))
+                    .addContainerGap(90, Short.MAX_VALUE)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE)
+                    .addGap(141, 141, 141))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -509,9 +514,7 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    // NEED TO CREATE ActionPerformed METHOD FOR ALL BUTTONS
     
-   
     /**
      * @param args the command line arguments
      */
