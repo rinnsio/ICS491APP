@@ -13,7 +13,7 @@
 <ul>
   <li>Weng Lam Sio: Test files, slight program fixes and added functionality, Git wiki page</li>
   <li>Kristopher Nakamura: Lead document writer and editor, README</li>
-  <li>Vinson Gao: Completed functionality of program, GUI functionality integration, document contributor</li>
+  <li>Vinson Gao: Completed functionality of program, GUI functionality integration, document contributor, wiki contributor</li>
 </ul>
 
 <h3>Current Progress/Final Thoughts</h3>
