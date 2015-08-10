@@ -11,14 +11,14 @@
 <h1>Version 3 submission</h1>
 <h2>Contributors:</h2> 
 <ul>
-  <li>Weng Lam Sio: </li>
-  <li>Kristopher Nakamura: </li>
-  <li>Vinson Gao: </li>
+  <li>Weng Lam Sio: Test files, slight program fixes and added functionality, Git wiki page</li>
+  <li>Kristopher Nakamura: Lead document writer and editor, README</li>
+  <li>Vinson Gao: Completed functionality of program, GUI functionality integration, document contributor</li>
 </ul>
 
 <h3>Current Progress</h3>
   <p>
-    
+    The program runs with slight issues.  There are small typos and lack of features such as certain warning messages but the largest issue the program has is that the calculations for the total hours worked and wages earned is not working at the moment.  The program still properly keeps track of the clock in and out time regardless of that issue.  There was still a lack of communication between the programmers due to work and time mismatches, and if that was done better, we could have had a much more robust program.  The comments in the code helped to reduce time of understanding other's code.
   </p>
   
   
