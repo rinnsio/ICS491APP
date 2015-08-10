@@ -84,7 +84,7 @@ public class logs extends javax.swing.JDialog {
                 String wage = ((Integer)itemInRow[1]).toString();
                 String time_in = dateFormater.format((Time)itemInRow[2]);
                 String time_out = dateFormater.format((Time)itemInRow[3]);
-                String total_hours = '$'+((Double)itemInRow[4]).toString();
+                String total_hours = ((Double)itemInRow[4]).toString();
                 String total_wages = '$'+((Double)itemInRow[5]).toString();
                   
                 // pack the datas into the object array which is prepare for the jtable
@@ -102,12 +102,12 @@ public class logs extends javax.swing.JDialog {
         model = new DefaultTableModel(data,
                 new Object[]{"date","wage","time in","time out","total hours","total wages"});
         colorTable = new ColorTable(model);
-        colorTable.getColumnModel().getColumn(0).setPreferredWidth(300);
+        colorTable.getColumnModel().getColumn(0).setPreferredWidth(200);
         colorTable.getColumnModel().getColumn(1).setPreferredWidth(100);
         colorTable.getColumnModel().getColumn(2).setPreferredWidth(200);
         colorTable.getColumnModel().getColumn(3).setPreferredWidth(200);
-        colorTable.getColumnModel().getColumn(4).setPreferredWidth(100);
-        colorTable.getColumnModel().getColumn(5).setPreferredWidth(100);
+        colorTable.getColumnModel().getColumn(4).setPreferredWidth(200);
+        colorTable.getColumnModel().getColumn(5).setPreferredWidth(200);
         colorTable.setRowHeight(30);
 
         colorTable.getTableHeader().setReorderingAllowed(false);
@@ -133,7 +133,7 @@ public class logs extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -54,7 +54,7 @@ public class clockout extends javax.swing.JDialog {
 
             }
         });
-        jButton2.setText("CANCLE");
+        jButton2.setText("CANCEL");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 setVisible(false);
