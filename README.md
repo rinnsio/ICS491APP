@@ -16,7 +16,7 @@
   <li>Vinson Gao: Completed functionality of program, GUI functionality integration, document contributor</li>
 </ul>
 
-<h3>Current Progress</h3>
+<h3>Current Progress/Final Thoughts</h3>
   <p>
     The program runs with slight issues.  There are small typos and lack of features such as certain warning messages but the largest issue the program has is that the calculations for the total hours worked and wages earned is not working at the moment.  The program still properly keeps track of the clock in and out time regardless of that issue.  There was still a lack of communication between the programmers due to work and time mismatches, and if that was done better, we could have had a much more robust program.  The comments in the code helped to reduce time of understanding other's code.
   </p>
